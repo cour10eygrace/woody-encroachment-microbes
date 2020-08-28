@@ -1,4 +1,4 @@
-﻿,Kingdom,Phylum,Class,Order,Family,Genus,Species 
+ID,Kingdom,Phylum,Class,Order,Family,Genus,Species 
 904d51b40e43454815aa39f8cf34c304,Bacteria,Verrucomicrobia,[Spartobacteria],[Chthoniobacterales],[Chthoniobacteraceae],DA101,
 814c01470e53766e2dd367110ed3166d,Archaea,Crenarchaeota,Thaumarchaeota,Nitrososphaerales,Nitrososphaeraceae,Candidatus Nitrososphaera,SCA1145
 e9a14d164ab0512dd06be22c1ebb0cd3,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Hyphomicrobiaceae,Rhodoplanes,
@@ -1114,7 +1114,7 @@ cdc5c7669bc14422a6dd68d928439b3a,Bacteria,Proteobacteria,Alphaproteobacteria,Rhi
 82cc421c57c7c9e63bf4a883a1295ba7,Bacteria,Gemmatimonadetes,Gemmatimonadetes,Ellin5290,,,
 08f781464b0956da6a34aa1bec3ec5ce,Bacteria,Proteobacteria,Deltaproteobacteria,Syntrophobacterales,Syntrophobacteraceae,,
 399b39d2c6b62bd699a5d3dd8b5ae50e,Bacteria,,,,,,
-70fe57d1853861e2a24f9bf0949c6c04,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+70fe57d1853861e2a24f9bf0949c6c04,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 fcb535e54619deb1a92e62e8794dd647,Bacteria,Acidobacteria,Acidobacteria-6,iii1-15,,,
 b79c822ccc36c5994093440922f39c0e,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Comamonadaceae,Methylibium,
 af5fb8fd945f4d11b2dd2657f9cdb371,Bacteria,Bacteroidetes,Sphingobacteriia,Sphingobacteriales,Sphingobacteriaceae,,
@@ -1360,7 +1360,7 @@ e6dc1d36b14f156878ec26e6d7ea34bd,Bacteria,Bacteroidetes,[Saprospirae],[Saprospir
 d701e3d528e25bf4a0aecbe1b9fad18e,Bacteria,,,,,,
 d231a3bbc3afa61983e4d5c6d9b38c33,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,,,
 bb76cf896d5ccc672cbdbda2be49c477,Bacteria,Chlamydiae,Chlamydiia,Chlamydiales,Rhabdochlamydiaceae,Candidatus Rhabdochlamydia,
-517033e51e6a45767e38e36b2c22fe46,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+517033e51e6a45767e38e36b2c22fe46,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 a1b5e85d9d6ea4ebd5aa67cb3b9a63e2,Bacteria,Verrucomicrobia,[Spartobacteria],[Chthoniobacterales],[Chthoniobacteraceae],DA101,
 bdfbdaeb7475cb52169b543472733b55,Bacteria,Acidobacteria,DA052,Ellin6513,,,
 85d42b5260cce4e8efb9c7060cdd363c,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,,,
@@ -2020,7 +2020,7 @@ f61351be847b56c6d17e85d1af918a60,Bacteria,Proteobacteria,Deltaproteobacteria,Myx
 e64e4919d2ff42907a571f223eebe1fc,Bacteria,Proteobacteria,Alphaproteobacteria,Caulobacterales,Caulobacteraceae,,
 624ac8450e1ce35eb18c57b660763614,Bacteria,Bacteroidetes,[Saprospirae],[Saprospirales],Chitinophagaceae,,
 0cd53808f7870cd8c2bef942b5f7a04f,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Hyphomicrobiaceae,Rhodoplanes,
-b57e8eaac3457fab0bc600c0e6ce809b,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+b57e8eaac3457fab0bc600c0e6ce809b,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 158b99d448949d289ca46838e34416a9,Bacteria,,,,,,
 7154e9d84cc58ae053a8603c97ff4323,Bacteria,Bacteroidetes,[Saprospirae],[Saprospirales],Chitinophagaceae,,
 ddf42ecdc3c94917d044cd5e77275420,Bacteria,Chloroflexi,Anaerolineae,SB-34,,,
@@ -2189,7 +2189,7 @@ fe663bbd334509b17f30e3c42cfcf193,Bacteria,Bacteroidetes,Sphingobacteriia,Sphingo
 0a4a985c1addc17f47f3bf2403813c2c,Bacteria,Chloroflexi,C0119,,,,
 aa818ec0a6bfa4f8d250e2bef26989b6,Bacteria,Acidobacteria,[Chloracidobacteria],RB41,,,
 207b63e894d827cb02b22245a23ee0ff,Bacteria,Proteobacteria,Deltaproteobacteria,Syntrophobacterales,Syntrophaceae,,
-520b1d52cdf2bfdd55bbbfc884304aff,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+520b1d52cdf2bfdd55bbbfc884304aff,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 c564b40c5cdd53d0b3c7910242c49c0b,Bacteria,,,,,,
 5f08bb0557460b634bd6adfa325be37d,Bacteria,Actinobacteria,Acidimicrobiia,Acidimicrobiales,,,
 6849ee944f34049403e12849808e79bf,Bacteria,Acidobacteria,Solibacteres,Solibacterales,,,
@@ -2965,7 +2965,7 @@ b972b1ba269e421eb047085a4cef9dc5,Bacteria,Verrucomicrobia,Opitutae,Opitutales,Op
 c417a55c25bf564bd6113e01bb14fce3,Bacteria,Actinobacteria,Thermoleophilia,Solirubrobacterales,Conexibacteraceae,,
 982f6b910488c1a0670db54a261f2efb,Bacteria,OD1,ZB2,,,,
 6ccdadc9b6d21cf12744ef1e79aff1b8,Bacteria,Bacteroidetes,[Saprospirae],[Saprospirales],Chitinophagaceae,,
-c3a0b67417048c78967fda57c39ec82f,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+c3a0b67417048c78967fda57c39ec82f,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 df5e6bf00ce58feea914f0f9a7d04954,Bacteria,Chlamydiae,Chlamydiia,Chlamydiales,Parachlamydiaceae,Candidatus Protochlamydia,
 1768ed5be9bfda6c9f7eb392ac1fde52,Bacteria,Actinobacteria,Thermoleophilia,Solirubrobacterales,Conexibacteraceae,,
 c7e4b88254315522a47845e35d2c840f,Bacteria,Chloroflexi,Ktedonobacteria,Thermogemmatisporales,Thermogemmatisporaceae,,
@@ -3478,7 +3478,7 @@ f9038c47458bc01cd2a7b56076e362f0,Bacteria,Planctomycetes,Planctomycetia,Gemmatal
 b72e72424ee493eb720c1ae8afb7a132,Archaea,Euryarchaeota,Methanomicrobia,Methanosarcinales,Methanosarcinaceae,Methanosarcina,
 91ed4f5f1b8dc3d1f7df5846a79d1acc,Bacteria,Chloroflexi,Ktedonobacteria,Thermogemmatisporales,Thermogemmatisporaceae,,
 38c6cebf0060e503cc894351d6d12f91,Bacteria,Proteobacteria,Alphaproteobacteria,,,,
-1606d9838ae20fb3dd4b4bb69856956a,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+1606d9838ae20fb3dd4b4bb69856956a,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 ecb0c8964475d5614837e384c1fee9a9,Bacteria,Bacteroidetes,Cytophagia,Cytophagales,Cytophagaceae,Spirosoma,
 c77a082a393debd3c5082ea2ad463d79,Bacteria,Bacteroidetes,[Saprospirae],[Saprospirales],Chitinophagaceae,,
 73f1e6370eb22db56a2c7d5fe659f4af,Bacteria,AD3,ABS-6,,,,
@@ -3684,7 +3684,7 @@ dba1f1bc6e92ba67a5bcf452860e0ac5,Bacteria,WPS-2,,,,,
 7452d2b3d48133f1a843e62be532f9a6,Bacteria,Acidobacteria,Acidobacteriia,Acidobacteriales,Koribacteraceae,,
 70b40d4af9de3a0fc541fbce6b8bfe4d,Bacteria,,,,,,
 c3c17a5da6ba784b929cb8584f996d3f,Bacteria,Proteobacteria,Betaproteobacteria,Ellin6067,,,
-d205d04d33a8ba95345c40e84d11ce17,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+d205d04d33a8ba95345c40e84d11ce17,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 c89375401a6d368f0e759407bc0b420e,Bacteria,Chloroflexi,Ktedonobacteria,Ktedonobacterales,Ktedonobacteraceae,,
 c08e5204da1c04a3d9a54fc62945cb0e,Bacteria,OD1,ZB2,,,,
 6166afec8fbf990c21b8d9c1c99ba4f0,Bacteria,Chloroflexi,P2-11E,,,,
@@ -5195,7 +5195,7 @@ b8926df4f96df477a7095b87e5f88cbb,Bacteria,Bacteroidetes,Sphingobacteriia,Sphingo
 16ea6e377b98c23b3c9f7c31b43bf7c3,Bacteria,Bacteroidetes,[Saprospirae],[Saprospirales],Chitinophagaceae,,
 276d7e69d8ab32e955261061fb54576a,Bacteria,Verrucomicrobia,Opitutae,Opitutales,Opitutaceae,Opitutus,
 8eedf1aa0b0c58e30547a56253cd2ec4,Bacteria,Planctomycetes,Planctomycetia,Pirellulales,Pirellulaceae,,
-c57a0f06f04c0d969180389c4a13afa8,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+c57a0f06f04c0d969180389c4a13afa8,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 83c8491612275e17f06c18b4f7668e1e,Bacteria,FBP,,,,,
 7f72e46640a80953e7dfe8017ec379f9,Bacteria,WPS-2,,,,,
 259f2ed60f3cc39daf0fbdb119f5eb7f,Bacteria,Planctomycetes,vadinHA49,p04,,,
@@ -8149,7 +8149,7 @@ b3353b8185c0968848a4d6d5c07a3d63,Bacteria,OD1,ZB2,,,,
 022ac7f11242b6de5742019f39b37777,Bacteria,Acidobacteria,Solibacteres,Solibacterales,,,
 f5a26c2d5bb66f5e3192999a5fe1f52d,Bacteria,Verrucomicrobia,Opitutae,Opitutales,Opitutaceae,,
 c79e18f1a563ac5d96392191a92b7796,Bacteria,Proteobacteria,Deltaproteobacteria,Myxococcales,Haliangiaceae,,
-e6ff2ebb0ca099dade05e4d08770d963,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+e6ff2ebb0ca099dade05e4d08770d963,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 0504a143ef3cedc405b20cc08b1716e8,Bacteria,FBP,,,,,
 170c93737b10373f5803a568e9ced938,Bacteria,FBP,,,,,
 84f3478891719873060da60d638b05ca,Bacteria,Armatimonadetes,Chthonomonadetes,Chthonomonadales,Chthonomonadaceae,,
@@ -9962,11 +9962,11 @@ fe307884a360a2ffebc5fad6627925e3,Bacteria,Bacteroidetes,Cytophagia,Cytophagales,
 5dd47436368ad20b643c3d739e725a92,Bacteria,,,,,,
 f04c2fff59cb7f3b10df278bcc837575,Bacteria,Planctomycetes,Planctomycetia,Gemmatales,Gemmataceae,,
 fac50b6b5d6a2d2d4ff08e389e677f11,Bacteria,,,,,,
-c60d787762947bf03fcdd5bc1fd87b66,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+c60d787762947bf03fcdd5bc1fd87b66,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 2856ce17c129c8c239c65687f7332212,Bacteria,Acidobacteria,Acidobacteria-6,iii1-15,RB40,,
 ccd92ebb8b134b81db50f158a03bfec2,Bacteria,Planctomycetes,Planctomycetia,Pirellulales,Pirellulaceae,,
 35e0cea763df44f5eb0180278f8f3e96,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Sinobacteraceae,,
-abd1e636e9ed75adcb89affb49394eb6,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+abd1e636e9ed75adcb89affb49394eb6,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 14b1eeef3955f1e4a62bf4b0d8bd470e,Bacteria,Actinobacteria,MB-A2-108,0319-7L14,,,
 3427e556ce48233baf8998ef9f699e1b,Bacteria,Bacteroidetes,[Saprospirae],[Saprospirales],Chitinophagaceae,,
 3c2c29eb7a1fa0f6df7658550e833866,Bacteria,Planctomycetes,Phycisphaerae,WD2101,,,
@@ -10989,7 +10989,7 @@ ed4920b20219f655ce87e353f33989db,Bacteria,Planctomycetes,Phycisphaerae,WD2101,,,
 1e1d0a4f65e73433cee10a91dccf2406,Bacteria,Chlamydiae,Chlamydiia,Chlamydiales,Rhabdochlamydiaceae,Candidatus Rhabdochlamydia,
 7272d4f96bd5553d815ffbcab6c93060,Bacteria,Proteobacteria,Deltaproteobacteria,Myxococcales,Haliangiaceae,,
 d7edc4f56322253078e7cd16fd250b99,Bacteria,Bacteroidetes,[Saprospirae],[Saprospirales],Chitinophagaceae,Segetibacter,
-269a46783985f880650952177bb13e4f,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+269a46783985f880650952177bb13e4f,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 db8c8fc3c19b0142165a55a57e8e8941,Bacteria,Armatimonadetes,Chthonomonadetes,Chthonomonadales,Chthonomonadaceae,,
 fb47f8cc47262fe7508f9f39c903cfa1,Bacteria,OD1,ZB2,,,,
 d84b4f257c716490f9946862870bdd55,Bacteria,Chloroflexi,C0119,,,,
@@ -11067,7 +11067,7 @@ f05fb91efd1f196e57cdc1ceca666b08,Bacteria,Chlamydiae,Chlamydiia,Chlamydiales,Rha
 7d159f37ba91ffef12171b222b0b7e07,Bacteria,OD1,SM2F11,,,,
 2d6662a0f5608c9a8d354da52349e58c,Bacteria,,,,,,
 d833b5600a1065e5d163754758311a3d,Bacteria,Chloroflexi,Anaerolineae,Caldilineales,Caldilineaceae,,
-2b4065379eccbdebf18fe91110344e3d,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+2b4065379eccbdebf18fe91110344e3d,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 1e9987a39d4c02407d1e1661f9f60eac,Bacteria,Chloroflexi,Anaerolineae,SBR1031,oc28,,
 336b82ba0ca5b7a54d51967bd87eca5e,Bacteria,Proteobacteria,Gammaproteobacteria,Thiotrichales,Piscirickettsiaceae,,
 8c163e702c794a2dc5a617d4860bd268,Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,,,
@@ -16724,7 +16724,7 @@ d7ad8c925c72cd1c84a7d31017eca3da,Bacteria,AD3,ABS-6,,,,
 d8e72f845b5ef07de9810b43fe38436a,Bacteria,Planctomycetes,Planctomycetia,Gemmatales,Isosphaeraceae,,
 6bbb505e8d9b1e209480c4dadffb67c4,Bacteria,Proteobacteria,Alphaproteobacteria,,,,
 d2e299c50bb31b1c24576f7f39115b6c,Bacteria,OP11,OP11-4,,,,
-09ba90da620239bd8d0e5b47297528cd,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+09ba90da620239bd8d0e5b47297528cd,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 7d86454adc6816e8763e06788a87b513,Bacteria,Proteobacteria,Deltaproteobacteria,Bdellovibrionales,Bdellovibrionaceae,Bdellovibrio,
 73c5909e05cb0bd192c4106c5cadbd82,Bacteria,FBP,,,,,
 a0560d7a23d9f629f6619ef0d0f3409a,Bacteria,TM7,SC3,,,,
@@ -23296,7 +23296,7 @@ e99c224a1da211ff07070f22adf291ae,Bacteria,,,,,,
 21cd8b00948a0dfa3cd1b4cbd9fc2313,Bacteria,Elusimicrobia,Elusimicrobia,FAC88,,,
 7b6ee43016f710861fea414063af43a5,Bacteria,TM7,SC3,,,,
 42aae0e0c56f7d7d23071e9c9128c2bd,Bacteria,,,,,,
-1423b06429d47585d635c206b24321af,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp.
+1423b06429d47585d635c206b24321af,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bosea,genosp
 478a4e9c272fe2ae0d81d774c07680ff,Bacteria,Chloroflexi,Ktedonobacteria,Thermogemmatisporales,Thermogemmatisporaceae,,
 72396575bcb280e91c175b0556170846,Bacteria,Planctomycetes,Planctomycetia,Gemmatales,Gemmataceae,Gemmata,
 80868b3f080be9f5673613a03a61722a,Bacteria,Bacteroidetes,Bacteroidia,Bacteroidales,,,
