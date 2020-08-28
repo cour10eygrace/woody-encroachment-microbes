@@ -1,0 +1,8 @@
+R script workflow is as follows: 
+1. leaftraitsGCB.R- runs PCA ordination of leaf traits and anova for leaf N. Makes Fig S3 and Fig S5
+2. brmssetup.R-organizes all data for brms models. Saves as GCB_brms_data.Rdata. Makes Fig 2 a,b and Fig S1. 
+3. brmsGCB.R-runs brms models for alpha diversity. Calculates parameter estimates and bayesian confidence intervals. Makes Fig 3 and Fig S6. 
+(get_sem_params.R and get_sem_16S.R are used for plotting Figure 3). 
+4. betadivGCB.R-runs NMDS and adonis perMANOVA models for beta diversity. Makes Fig 2 c, d and Fig 5.  
+5. taxaabundGCB.R-runs linear models for relative read abundance of taxa at the phylum level. 
+6. indicsppGCB.R-runs indicator spp analysis.
