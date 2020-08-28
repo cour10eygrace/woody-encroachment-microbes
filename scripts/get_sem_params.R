@@ -1,12 +1,10 @@
 # FUNCTION to process model fits
 get_sem_params <- function(fit_model){
-  # fit_model <- sem1.ITS    
-  # fit_model <- sem1.16S    
   ITS.samples <- data.frame(fixef(fit_model, summary=FALSE)) %>%
    dplyr::select(starts_with("ITS")) # get fixed effects
   colnames(ITS.samples) <- sub("ITSotus_","",colnames(ITS.samples))
   samples <- ITS.samples %>% 
-    mutate(veg.AMF = vegS  # shrub vs herb effect (veg) for AMF (also AMF.shrub - AMF.herb below)
+    mutate(veg.AMF = vegS  
            ,veg.ECM.ERM = vegS + symbiontECM.ERM.vegS 
            ,veg.Nfix = vegS + symbiontNfix.vegS 
 # calculate intercepts
@@ -21,9 +19,8 @@ get_sem_params <- function(fit_model){
 # Do the shrub soil communities differ among symbiont types? (regardless of their 'effects' relative to herb communities)
            ,dif.AMF.ECMERM = AMF.shrub - ECMERM.shrub
            ,dif.AMF.Nfix = AMF.shrub - Nfix.shrub
-           ,dif.ECMERM.Nfix =  ECMERM.shrub - Nfix.shrub) #%>%
-    #dplyr::select(-c(1:4, 13:14))
-  
+           ,dif.ECMERM.Nfix =  ECMERM.shrub - Nfix.shrub) 
+    
     
   temp <- summary(as.mcmc(samples), quantiles = c(0.025, 0.05, 0.1, 0.5, 0.9, 0.95, 0.975))
   fit.stats <- as.data.frame(signif(cbind(temp$statistics[,1:2], temp$quantiles),3))
@@ -45,16 +42,14 @@ get_sem_params <- function(fit_model){
 }
 
 get_sem_params_rich <- function(fit_model){
-  # fit_model <- sem1.ITS    
-  # fit_model <- sem1.16S    
   ITS.samples <- data.frame(fixef(fit_model, summary=FALSE)) %>%
     dplyr::select(starts_with("ITS")) # get fixed effects
   colnames(ITS.samples) <- sub("ITSotus_","",colnames(ITS.samples))
   samples <- ITS.samples %>% 
-    mutate(veg.AMF = vegS  # shrub vs herb effect (veg) for AMF (also AMF.shrub - AMF.herb below)
+    mutate(veg.AMF = vegS  
            ,veg.ECM.ERM = vegS + symbiontECM.ERM.vegS 
            ,veg.Nfix = vegS + symbiontNfix.vegS 
-           # calculate intercepts
+      # calculate intercepts
            ,AMF.shrub = Intercept + vegS
            ,ECMERM.shrub = Intercept + symbiontECM.ERM + vegS + symbiontECM.ERM.vegS
            ,Nfix.shrub = Intercept+symbiontNfix + vegS + symbiontNfix.vegS
@@ -63,11 +58,10 @@ get_sem_params_rich <- function(fit_model){
            ,ECMERM.herb = Intercept + symbiontECM.ERM 
            ,Nfix.herb = Intercept+symbiontNfix 
            
-           # Do the shrub soil communities differ among symbiont types? (regardless of their 'effects' relative to herb communities)
+      # Do the shrub soil communities differ among symbiont types? (regardless of their 'effects' relative to herb communities)
            ,dif.AMF.ECMERM = AMF.shrub - ECMERM.shrub
            ,dif.AMF.Nfix = AMF.shrub - Nfix.shrub
-           ,dif.ECMERM.Nfix =  ECMERM.shrub - Nfix.shrub) #%>%
-  #dplyr::select(-c(1:4, 13:14))
+           ,dif.ECMERM.Nfix =  ECMERM.shrub - Nfix.shrub) 
   
   
   temp <- summary(as.mcmc(samples), quantiles = c(0.025, 0.05, 0.1, 0.5, 0.9, 0.95, 0.975))

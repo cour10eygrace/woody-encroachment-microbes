@@ -1,12 +1,10 @@
 # FUNCTION to process model fits
 get_sem_params_16S <- function(fit_model){
-  # fit_model <- sem1.ITS    
-  # fit_model <- sem1.16S    
   X16S.samples <- data.frame(fixef(fit_model, summary=FALSE)) %>%
    dplyr::select(starts_with("logX16S")) # get fixed effects
   colnames(X16S.samples) <- sub("logX16Sotus1_","",colnames(X16S.samples))
   samples <- X16S.samples %>% 
-    mutate(veg.AMF = vegS  # shrub vs herb effect (veg) for AMF (also AMF.shrub - AMF.herb below)
+    mutate(veg.AMF = vegS  
            ,veg.ECM.ERM = vegS + symbiontECM.ERM.vegS 
            ,veg.Nfix = vegS + symbiontNfix.vegS 
 # calculate intercepts
@@ -21,9 +19,7 @@ get_sem_params_16S <- function(fit_model){
 # Do the shrub soil communities differ among symbiont types? (regardless of their 'effects' relative to herb communities)
            ,dif.AMF.ECMERM = AMF.shrub - ECMERM.shrub
            ,dif.AMF.Nfix = AMF.shrub - Nfix.shrub
-           ,dif.ECMERM.Nfix =  ECMERM.shrub - Nfix.shrub) #%>%
-    #dplyr::select(-c(1:4, 13:14))
-  
+           ,dif.ECMERM.Nfix =  ECMERM.shrub - Nfix.shrub) 
   temp <- summary(as.mcmc(samples), quantiles = c(0.025, 0.05, 0.1, 0.5, 0.9, 0.95, 0.975))
   fit.stats <- as.data.frame(signif(cbind(temp$statistics[,1:2], temp$quantiles),3))
   colnames(fit.stats) <- c("mean","sd","x2.5","x5","x10","x50","x90","x95","x97.5")
