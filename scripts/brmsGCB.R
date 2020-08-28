@@ -6,9 +6,7 @@ library(rstan)
 library(bayestestR)
 
 #load scaled (mean centered) data-output from brmssetup.R
-#load(file= "GCB_brms_data.RData")#old climate data 
-load(file= "GCB_brms_datav2.RData")#new Worldclim data v2.1
-
+load(file= "data/GCB_brms_data.RData")
 
 #brms models---- 
 #fungi----
@@ -135,7 +133,7 @@ fit.stats2x$param<-row.names(fit.stats2x)
 
 #Figures----
 #Fig 3 a----
-source("get_sem_params.R")
+source("scripts/get_sem_params.R")
 ## fungi 
 P0 <- get_sem_params(sem2.ITS.rich) 
 level1.stats <- P0[[1]]
@@ -146,7 +144,7 @@ level1.stats <- level1.stats[match(vars.order1, rownames(level1.stats)),]
 level1.stats<-level1.stats[-c(8:9), ]
 
 ## bacteria 
-source("get_sem_params_16S.R")
+source("scripts/get_sem_params_16S.R")
 P0<-get_sem_params_16S(sem2.16S.rich) 
 level1.stats.bac <- P0[[1]]
 level1.stats.bac <- level1.stats.bac[rownames(level1.stats.bac) %in% vars.order1,]
@@ -250,14 +248,16 @@ grid.arrange(plot2, plot3, ncol=2)
 #a 
 postITSrichl<-pivot_longer(postITSrich, cols=c("ITSotus_Nfix" ,"ITSotus_ECM_ERM" ,"ITSotus_AMF"), 
                            names_to = "symbiont")%>%dplyr::select(value, symbiont)
-ggplot(postITSrichl, aes(x=value)) + geom_density(aes(fill=symbiont), alpha=0.8) +
+figa<-ggplot(postITSrichl, aes(x=value)) + geom_density(aes(fill=symbiont), alpha=0.8) +
   theme_classic()+ scale_fill_brewer(palette = 'Set2', type='qual')+
   xlab("Effect on ITS OTU richness")+ 
   geom_vline(xintercept = 0, lty=2)
 #b  
 post16Srichl<-pivot_longer(post16Srich, cols=c("logX16Sotus1_Nfix" ,"logX16Sotus1_ECM_ERM" ,"logX16Sotus1_AMF"), 
                            names_to = "symbiont")%>%dplyr::select(value, symbiont)
-ggplot(post16Srichl, aes(x=value)) + geom_density(aes(fill=symbiont), alpha=0.8) +
+figb<-ggplot(post16Srichl, aes(x=value)) + geom_density(aes(fill=symbiont), alpha=0.8) +
   theme_classic()+ scale_fill_brewer(palette = 'Set2', type='qual')+
-  xlab("Effect on 16S OTU richness")+ geom_vline(xintercept = 0, lty=2)
+  xlab("Effect on 16S OTU richness")+ geom_vline(xintercept = 0, lty=2)+
+   theme(legend.position = "none")
 
+grid.arrange(figa, figb ,ncol=2)
