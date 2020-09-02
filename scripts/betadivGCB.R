@@ -21,9 +21,9 @@ rownames(bray)<-bray$X
 bray$X<-NULL
 map<-read.csv("data/bray_map.csv") #sample ID by tube #
 map<-merge(map, soil.data, by="Tube")
-map<-dplyr::select(map,soilCN, VWC, pH, root.microb, veg, site, ï..Sample.ID)
-rownames(map)<-map$ï..Sample.ID
-map$ï..Sample.ID<-NULL
+map<-dplyr::select(map,soilCN, VWC, pH, root.microb, veg, site, Sample.ID)
+rownames(map)<-map$Sample.ID
+map$Sample.ID<-NULL
 pmap<-match(rownames(bray), rownames(map))
 map2b<-map[pmap, ]
 bray1<-as.dist(as(bray,"matrix"))
@@ -36,16 +36,16 @@ map2b$Row.names<-NULL
 
 #leaf traits 
 traits<-read.csv("data/PCA_traits_euclidian.csv")
-traits<-dplyr::select(traits, PC1, PC2, X)
-row.names(traits)<-traits$X  
+traits<-dplyr::select(traits, PC1, PC2, X, SampleID)
+row.names(traits)<-traits$SampleID
 map2bS<-merge(map2b, traits, by="row.names")
 row.names(map2bS)<-map2b$Row.names
 map2bS$Row.names<-NULL
 
 #bacteria
 wunif<-read.csv("data/weighted_unifrac_dm.csv")
-rownames(wunif)<-(wunif$ï..)
-wunif$ï..<-NULL
+rownames(wunif)<-(wunif$Tube)
+wunif$Tube<-NULL
 colnames(wunif)<-row.names(wunif)
 #remove no template control samples
 wunif$NTC1<-NULL
@@ -107,46 +107,4 @@ adonis(bray1S~ PC1 + PC2 ,data=NMDS_bray_shrub, permutations=999)
 adonis(wunif1~veg, data=map2unif,permutations=999, strata = map2unif$Location)
 adonis(wunif1~ temp + precip + pH + soilCN + VWC+ root.microb, data=map2unif,permutations=999, strata = map2unif$Vegetation)
 adonis(wunif1S~ PC1 + PC2 ,data=NMDS_wunif_shrub, permutations=999) 
-
-#Figures 
-library(RColorBrewer)
-cols<-brewer.pal(n = 8, name = 'Greens')
-n <- 60
-qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
-col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
-col_vector<-col_vector[c(26,25,24,22,21,20,19,18,17,16,13,11,10,9,15,12,14)]
-cols<-col_vector[c(1,3,4,5,8,10,11,12,13,14,15,16,17)]
-cols2<-cols[c(13,12,11,10,9,8,7,6,5,4,3,2,1)]
-
-
-#Fig 2 c, d
-c<-ggplot(data=NMDS_bray_coords,aes(x=MDS1,y=-MDS2, colour=site)) + 
-  stat_ellipse(level = 0.85)+
-  scale_color_manual(values = cols2, name="Site") + theme_classic()+ 
-  geom_point(aes(MDS1,y=-MDS2, colour=site, shape=veg))
-
-d<-ggplot(data=NMDS_wunif_coords,aes(x=MDS1,y=-MDS2, colour=site)) + 
-  stat_ellipse(level = 0.85)+
-  scale_color_manual(values = cols2, name="Site") + theme_classic()+ 
-  geom_point(aes(MDS1,y=-MDS2, colour=site, shape=veg))
-
-grid.arrange(c, d, ncol=2)
-
-#Fig 5
-#Fungi
-p1<-qplot(data=NMDS_bray_coords,x=MDS2,y=MDS3,colour=veg)+ scale_color_brewer(palette="Paired",  labels = c("Herb","Woody")) +stat_ellipse() +theme_classic()
-p2<-qplot(data=NMDS_bray_shrub,x=MDS1,y=MDS2,colour=root.microb) +stat_ellipse()+ scale_colour_brewer(palette = 'Set2', type='qual', name="Root symbiont")+ theme_classic()
-p3<-qplot(data=NMDS_bray_coords,x=MDS1,y=MDS2,colour=precip) + theme_classic() +
-  scale_color_continuous(type = 'viridis', name="MAP")
-
-grid.arrange( p1,p2,p3,ncol=3)
-
-#Bacteria
-p5<-qplot(data=NMDS_wunif_coords,x=MDS2,y=MDS3,colour=veg) + scale_color_brewer(palette="Paired",  labels = c("Herb","Woody")) +stat_ellipse() +theme_classic()
-p6<-qplot(data=(NMDS_wunif_shrub),x=MDS1,y=MDS2,colour=root.microb)+stat_ellipse()+ scale_colour_brewer(palette = 'Set2', type='qual', name="Root symbiont")+ theme_classic()
-p7<-qplot(data=(NMDS_wunif_coords),x=MDS1,y=MDS2,colour=pH)+ theme_classic()+
-  scale_color_continuous(type = 'viridis', name="pH")
-
-grid.arrange(p5, p6, p7,ncol=3)
-
 

@@ -85,9 +85,7 @@ ITS.dat <- with(dat3,
                   ,ITS.otus =scale(ITS_otus)
                   ,ph = scale(pH)
                   ,vwc = scale(VWC)
-                  ,soilN = scale(soilN)
                   ,soilCN = scale(soilCN)
-                  
                   ,sla = scale(sla.mean)
                   ,ldmc = scale(ldmc.mean)
                   ,leafC = scale(leafC.mean)
@@ -111,7 +109,6 @@ X16S.dat <- with(dat3
                              ,X16S.otus =scale(X16S.otus)
                              ,ph = scale(pH)
                              ,vwc = scale(VWC)
-                             ,soilN = scale(soilN)
                              ,soilCN = scale(soilCN)
                              
                              ,sla = scale(sla.mean)
@@ -134,40 +131,3 @@ summary(X16S.dat)
 save(ITS.dat, X16S.dat, file="data/GCB_brms_data.RData") 
 
 
-#Fig 2 a,b 
-microbe.data <- dplyr::select(dat3, site,veg,symbiont,ITS_otus,X16S.otus) %>%
-  reshape2::melt(id.vars=c("site","veg","symbiont")) 
-
-itsraw <- ggplot(filter(microbe.data,variable=="ITS_otus"), aes(x=fct_reorder(site,as.integer(symbiont)),y=log(value))) + 
-  geom_boxplot(aes(fct_reorder(site,as.integer(symbiont)), fill=veg, col=symbiont)) +
-  scale_fill_brewer(palette="Paired", name = "", labels = c("Herb","Woody")) + 
-  scale_colour_brewer(palette = 'Set2', type='qual')+
-  theme_minimal()+
-  labs(y = "Fungal richness (Log OTUs)", x='Site') + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
-
-x16raw <- ggplot(filter(microbe.data,variable=="X16S.otus"),aes(x=fct_reorder(site,as.integer(symbiont)),y=log(value))) + 
-  geom_boxplot(aes(fct_reorder(site,as.integer(symbiont)), fill=veg, col=symbiont)) +
-  scale_fill_brewer(palette="Paired", name = "", labels = c("Herb","Woody")) + 
-  scale_colour_brewer(palette = 'Set2', type='qual')+
-  theme_minimal()+ ylim(5, 8)+
-  labs(y = "Bacterial richness (Log OTUs)", x='Site') + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
-
-grid.arrange(itsraw,x16raw, nrow = 1)
-
-#Fig S1
-a<-ggplot(data=site.table, aes(x=(MAP/10), y=MAT))+
-  geom_point(aes(x=(MAP/10), y=MAT, col=root.microb.x), shape=15, size=2)+ 
-  geom_text(aes(x=(MAP/10)+1, label=site), size=2.5, nudge_y = -0.2, nudge_x = -0.2) +
-  theme_classic( )+ ylab("MAT(C)") + xlab("MAP(cm)")+ theme(legend.position = "none")
-b<-ggplot(data=site.table, aes(x=elev.x, y=MAT))+
-  geom_point(aes(x=elev.x, y=MAT, col=root.microb.x), shape=15, size=2)+ 
-  geom_text(aes(x=elev.x+100, label=site),size=2.5, nudge_y = -0.2, nudge_x = -0.2)+
-    theme_classic()+ ylab("MAT(C)") + xlab("Elevation(m)")+ theme(legend.position = "none")
-c<-ggplot(data=site.table, aes(x=elev.x, y=MAP/10))+
-  geom_point(aes(x=elev.x, y=MAP/10, col=root.microb.x), shape=15, size=2)+ 
- geom_text(aes(x=elev.x+100, label=site), size=2.5, nudge_y = 3, nudge_x = -0.5)+
-  theme_classic()+ ylab("MAP(cm)") + xlab("Elevation(m)")
-  
-grid.arrange(a,b,c, nrow=1)

@@ -32,37 +32,36 @@ itsl_reads<-subset(otu_all, itsreads>0)
 #subset by phyla
 asco<-subset(itsl_reads, Phylum=="Ascomycota")
 basidio<-subset(itsl_reads, Phylum=="Basidiomycota")
-blast<-subset(itsl_reads, Phylum=="Blastocladiomycota")#not in both 
 chyt<-subset(itsl_reads, Phylum=="Chytridiomycota")
 glom<-subset(itsl_reads, Phylum=="Glomeromycota")
-zyg<-subset(itsl_reads, Phylum=="Zygomycota")#not in both
 mort<-subset(itsl_reads, Phylum=="Mortierellomycota")
 
 ##run mixed effects models 
 hist(asco$itsreads)# not normal 
 hist(log(asco$itsreads))#not normal 
+#add 1 to all response vars for gamma requirement positive values 
 asco_veg<-glmer((log(itsreads)+1)~veg + (1|site), asco, family = Gamma) 
-summary(asco_veg)#S<NS 
+summary(asco_veg)
 
 hist(basidio$itsreads)#not normal 
 hist(log(basidio$itsreads))#not normal 
 basidio_veg<-glmer(log(itsreads)+1~veg + (1|site), basidio, family = Gamma) 
-summary(basidio_veg)#S<NS
+summary(basidio_veg)
 
 hist(chyt$itsreads)#not normal
 hist(log(chyt$itsreads))#not normal 
 chyt_veg<-glmer((log(itsreads)+1)~veg + (1|site), chyt, family=Gamma)
-summary(chyt_veg)#NS
+summary(chyt_veg)
 
 hist(glom$itsreads)#not normal
 hist(log(glom$itsreads))#not normal 
 glom_veg<-glmer((log(itsreads)+1)~veg + (1|site), glom, family=Gamma)
-summary(glom_veg)#NS
+summary(glom_veg)
 
 hist(mort$itsreads)#not normal
 hist(log(mort$itsreads))#not normal 
 mort_veg<-glmer((log(itsreads)+1)~veg + (1|site), mort, family=Gamma)
-summary(mort_veg)#NS
+summary(mort_veg)
 
 #TAXA---- 
 #read in otu table
@@ -87,13 +86,12 @@ otulb_reads<-subset(otu_all_b, X16Sreads>0)
 #subset by phylum 
 acido<-subset(otulb_reads, Phylum=="Acidobacteria")
 actino<-subset(otulb_reads, Phylum=="Actinobacteria")
-proteo<-subset(otulb_reads, Phylum=="Proteobacteria")
-firm<-subset(otulb_reads, Phylum=="Firmicutes")
-very<-subset(otulb_reads, Phylum=="Verrucomicrobia")
 bact<-subset(otulb_reads, Phylum=="Bacteroidetes")
-planct<-subset(otulb_reads, Phylum=="Planctomycetes")
 chlor<-subset(otulb_reads, Phylum=="Chloroflexi")
-
+firm<-subset(otulb_reads, Phylum=="Firmicutes")
+planct<-subset(otulb_reads, Phylum=="Planctomycetes")
+proteo<-subset(otulb_reads, Phylum=="Proteobacteria")
+very<-subset(otulb_reads, Phylum=="Verrucomicrobia")
 
 hist(log(acido$X16Sreads))#normal 
 acido_veg<-lmer(log(X16Sreads)~veg + (1|site), acido) 

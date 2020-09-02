@@ -41,10 +41,10 @@ indval_veg<-multipatt(x=as.data.frame(OTU.transp),
                       control=how(nperm=999))
 
 #To get summary information of OTUs that are indicators 
-summary.multipatt(indval_veg, minstat = 0.3)#stat=0.3 means taxa is found in 30% or more of the samples in that group  
+summary.multipatt(indval_veg, minstat = 0.2)#stat=0.2 means taxa is found in 20% or more of the samples in that group  
 
 itsveg<-as.data.frame(indval_veg$sign)%>%
-  subset(., p.value<0.05&stat>0.19)%>%
+  subset(., p.value<0.05&stat>0.2)%>%
   merge(.,taxa,by='row.names')%>%
   subset(., Species!="")
 
@@ -76,7 +76,7 @@ map2b<-na.omit(map2b)
 #check
 nrow(map2b)==nrow(OTU.transp_b)
 
-#create factor name to call for Uniqueclass, i.e., unique tree by site combination
+#create factor name to call for Uniqueclass
 Veg<-as.factor(map2b$veg)
 
 #indicator species analysis by unique identifier
@@ -86,10 +86,10 @@ indval_veg_b<-multipatt(x=as.data.frame(OTU.transp_b),
                       duleg=TRUE,
                       control=how(nperm=999))
 #To get summary information of OTUs that are indicators 
-summary.multipatt(indval_veg_b, minstat = 0.3)#stat=0.3 means taxa is found in 30% or more of the samples in that group  
+summary.multipatt(indval_veg_b, minstat = 0.2)#stat=0.2 means taxa is found in 20% or more of the samples in that group  
 
 X16sveg<-as.data.frame(indval_veg_b$sign)%>%
-  subset(., p.value<0.05&stat>0.19)%>%
+  subset(., p.value<0.05&stat>0.2)%>%
   merge(.,taxa_b,by='row.names')%>%
   subset(., Genus!="")
 
